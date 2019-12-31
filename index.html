@@ -1,220 +1,92 @@
 <!DOCTYPE html>
-<!--
-Created using JS Bin
-http://jsbin.com
-
-Copyright (c) 2019 by PerczelAron (http://jsbin.com/racuzus/14/edit)
-
-Released under the MIT license: http://jsbin.mit-license.org
--->
-<meta name="robots" content="noindex">
 <html>
 <head>
-<meta name="description" content="Communist Mutants from Space">
-  <meta charset="utf-8">
+<meta name="description" content="Communist Mutants from Space 2">
+<meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Taviraj:400,400i&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/v4-shims.css">
   <title>Communist Mutants from Space</title>
-<style id="jsbin-css">
-*{
-  box-sizing: border-box;
-}
-
-body{
-  font-family: sans-serif;
-  font-size: .9rem;
-  line-height: 1.5;
-  margin: 0.5rem;
-  padding: 1.5rem;
-  border: 1px solid #a7d7f9;
-}
-
-.Wiki{
-  font-size: .8rem;
-  margin-bottom: 1rem;
-}
-
-h1{
-  font-size: 1.8rem;
-  font-style: italic;
-  font-family: 'Linux Libertine','Georgia','Times',serif;
-  line-height: 1.3;
-  margin-bottom: -.4rem;
-}
-
-h2{
-  font-size: 1.3rem;
-  font-family: 'Linux Libertine','Georgia','Times',serif;
-  margin: 1.25rem .5rem -.5rem 0;
-  display: inline-block;
-}
-
-#Game-menu{
-  font-size: 1.05rem;
-  font-family: Sans-serif;
-  font-weight: bold;
-  margin: 1rem .5rem .5rem 0;
-  display: inline-block;
-}
-
-.Description{
-  margin-top: 2rem;
-}
-
-.picture-datas{
-  float: right;
-  border: 1px solid #a2a9b1;
-  display: inline-block;
-  padding: .25rem;
-  text-align: center;
-  margin: 1rem;
-}
-
-.picture-datas table{
-  text-align: left;
-  margin: 0 .25rem;
-  font-size: .8rem;
-  line-height: 1.8;
-  width: 16.5rem;
-}
-
-.picture-datas span,
-.Description span{
-  font-weight: bold;
-  font-style: italic;
-}
-
-figure{
-  padding: 0 1.5rem;
-}
-
-figcaption{
-  font-size: .8rem;
-  margin: -.4rem 0 .1rem;
-}
-
-.picture-datas img{
-  width: 14rem;
-  float: left;
-  margin-top: .5rem;
-}
-
-.Bold{
-  font-weight: bold;
-}
-
-sup{
-  vertical-align: super;
-  font-size: smaller;
-}
-
-.Content{
-  font-size: .8rem;
-  border: 1px solid #a2a9b1;
-  display: inline-block;
-  padding: .5rem;
-  margin: .5rem 0 0;
-  background-color: #f2f2f2;
-  line-height: 1.5rem;
-}
-
-.toctitle h3{
-  display: inline;
-}
-
-.toctitle{
-  text-align: center;
-}
-
-.Button::before{
-  Content: "[ ";
-}
-
-.Button::after{
-  Content: " ]";
-}
-
-.tocnumber, .toctext {
-  display: table-cell;
-  text-decoration: inherit;
-}
-
-.tocnumber {
-    padding-left: 0;
-    padding-right: 0.5em;
-    color: #222;
-}
-
-.level2{
-  margin-left: 1.5rem;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.pic-about-game{
-  border: 1px solid #a2a9b1;
-  padding: .25rem;
-  margin: .25rem 1rem 1rem 0;
-  background-color: #f2f2f2;
-  width: 190px;
-  float: left
-}
-
-.pic-about-game img{
-  width: 180px;
-  height: 122px;
-  vertical-align: middle;
-  text-align: center;
-}
-
-.pic-about-game p{
-  display: inline-block;
-  font-size: .75rem;
-}
-
-.Chapters ol{
-  font-size: .8rem;
-  line-height: 1.3rem;
-  margin-left: 2.5rem;
-  list-style-type: decimal;
-}
-
-.Chapters ul{
-  line-height: 1.5rem;
-  margin-left: 1.5rem;
-  list-style-type: inherit;
-}
-
-.Main-external{
-  font-style: italic;
-}
-
-.Categories{
-  border: 1px solid #a2a9b1;
-  padding: .5rem;
-  margin: .5rem 0 0;
-  background-color: #f2f2f2;
-  line-height: 1.5rem;  
-}
-
-.Category{
-  display: inline-block;
-  border-left: 1px solid #a2a9b1;
-  margin: 0.125em 0;
-  padding: 0 0.5em;
-}
-
-</style>
 </head>
 <body>
+  <header>
+    <section>
+      <ul id="personal">
+        <li><i class="fas fa-user"></i>Not logged in</li>
+        <li><a href="https://en.wikipedia.org/wiki/User_talk:89.133.82.78" target="_blank">Talk</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Special:Contributions/89.133.82.78" target="_blank">Contributions</a></li>
+        <li><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&returnto=Communist+Mutants+from+Space" target="_blank">Create account</a></li>
+        <li><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Communist+Mutants+from+Space" target="_blank">Log in</a></li>
+      </ul>
+    </section>
+    <section>
+      <ul id="main-left">
+        <li><button class="active">Article</button></li>
+        <li><button class="passive">Talk</button></li>
+      </ul>
+    </section>
+    <section>
+      <ul id="main-right">
+        <li><button class="active">Read</button></li>
+        <li><button class="passive">Edit</button></li>
+        <li><button class="passive">View history</button></li>
+        <li><div id="search"><input type="text" placeholder="Search Wikipedia" name="search"> <a href="#" target="_blank"><i class="fa fa-search"></i></a></div></li>
+      </ul>
+    </section>
+  </header>
+  <aside>
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png">
+    <section>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Main_Page" target="_blank">Main page</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Wikipedia:Contents" target="_blank">Contents</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Wikipedia:Featured_content" target="_blank">Featured content</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Portal:Current_events" target="_blank">Current events</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Random article</a></li>
+        <li><a href="https://donate.wikimedia.org/w/index.php?title=Special:LandingPage&country=EU&uselang=en&utm_medium=sidebar&utm_source=donate&utm_campaign=C13_en.wikipedia.org" target="_blank">Donate to Wikipedia</a></li>
+        <li><a href="https://store.wikimedia.org/" target="_blank">Wikipedia store</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Interaction</h3>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Help:Contents" target="_blank">Help</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Wikipedia:About" target="_blank">About Wikipedia</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Wikipedia:Community_portal" target="_blank">Community portal</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Special:RecentChanges?hidebots=1&hidecategorization=1&hideWikibase=1&limit=50&days=7&urlversion=2" target="_blank">Recent changes</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Wikipedia:Contact_us" target="_blank">Contact page</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Tools</h3>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Communist_Mutants_from_Space" target="_blank">What links here</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked?hidebots=1&hidecategorization=1&hideWikibase=1&target=Communist_Mutants_from_Space&limit=50&days=7&urlversion=2" target="_blank">Related changes</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" target="_blank">Upload file</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Special:SpecialPages" target="_blank">Special pages</a></li>
+        <li><a href="https://en.wikipedia.org/w/index.php?title=Communist_Mutants_from_Space&oldid=913531851" target="_blank">Permanent link</a></li>
+        <li><a href="https://en.wikipedia.org/w/index.php?title=Communist_Mutants_from_Space&action=info" target="_blank">Page information</a></li>
+        <li><a href="https://www.wikidata.org/wiki/Q5154312" target="_blank">Wikidata item</a></li>
+        <li><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&page=Communist_Mutants_from_Space&id=913531851" target="_blank">Cite this page</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Print/export</h3>
+      <ul>
+        <li><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Communist+Mutants+from+Space" target="_blank">Create a book</a></li>
+        <li><a href="https://en.wikipedia.org/w/index.php?title=Special:ElectronPdf&page=Communist+Mutants+from+Space&action=show-download-screen" target="_blank">Download as PDF</a></li>
+        <li><a href="#" target="_blank">Printable version</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Languages<a href="#"><i class="fa fa-cog fa-lg"></i></a></h3>
+      <a href="https://es.wikipedia.org/wiki/Mutantes_comunistas_del_espacio_exterior" target="_blank">Español</a>
+    </section>
+  </aside>
   <main>
-  <h1>Communist Mutants from Space</h1>
+<h1>Communist Mutants from Space</h1>
   <hr>
   <p class="Wiki">From Wikipedia, the free encyclopedia</p>
   <div class="picture-datas">
@@ -354,5 +226,8 @@ The menu also allowed for multiple players (up to four) to be entered into the g
     </div>
   </div>
   </main>
+  <footer>
+    <p>footer</p>
+  </footer>
 </body>
 </html>
