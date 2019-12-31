@@ -1,14 +1,347 @@
 <!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2019 by PerczelAron (http://jsbin.com/cubavej/12/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
 <html>
 <head>
 <meta name="description" content="Communist Mutants from Space 2">
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
   <link href="https://fonts.googleapis.com/css?family=Taviraj:400,400i&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/v4-shims.css">
   <title>Communist Mutants from Space</title>
+<style id="jsbin-css">
+/*-----------------------------
+    Global style components
+-----------------------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 10rem calc(100% - 10rem);
+  grid-template-rows: 5rem auto 10vw;
+}
+
+/*-----------------------------
+         Header's style
+-----------------------------*/
+
+header {
+  position: relative;
+  grid-column: 1 / span 2;
+  background: linear-gradient( #fff, #f6f6f6 150px, #f6f6f6);
+  z-index: 1;
+}
+
+header ul {
+  position: absolute;
+}
+
+header li {
+  display: inline-block;
+}
+
+#personal {
+  top: 0;
+  right: 0.5rem;
+  font-size: 0.75rem;
+  font-family: sans-serif;
+}
+
+#personal li{
+  margin: 0.75rem 0.25rem 0;
+}
+
+#personal i {
+  margin-right: .2rem;
+}
+
+#main-left {
+  bottom: -1px;
+  left: 10rem;
+}
+
+#main-right {
+  bottom: -1px;
+  right: 1.75rem;
+}
+
+#main-left li,
+#main-right li {
+  margin: 0 -5px 0 0;
+}
+
+.active {
+  background: linear-gradient(to top, #fff 60%, #fcfcfc);
+  border: 1px solid;
+  border-image: linear-gradient(to top, #99cfff 30%, #fff) 1 100%;
+  padding: 10px 8px;
+}
+
+.passive {
+  color: #0b0080;
+  background: linear-gradient(to top, #ebf2ff 1px, #fcfcfc);
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-image: linear-gradient(to top, #99cfff 30%, #fff) 1 100%;
+  padding: 10px 8px;
+  position: relative;
+  bottom: 1px;
+}
+
+#search {
+  position: relative;
+  bottom: 7px;
+  left: 10px;
+}
+/*-----------------------------
+         Aside's style
+-----------------------------*/
+
+aside {
+  background: #f6f6f6;
+  padding: 1rem;
+  z-index: 2;
+}
+
+aside img {
+  width: 8em;
+  margin-top: -5em;
+}
+
+aside section {
+  margin-top: 1rem;
+  line-height: 1.125rem;
+  font-size: 0.75rem;
+  font-family: sans-serif;
+}
+
+section h3::after {
+  content: "";
+  display: block;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,0,.3) 15%, rgba(0,0,0,.3) 85%, rgba(255,255,255,1) 100%);
+  height: 1px;
+  margin: .125rem 0;
+  width: 8rem;
+  text-align: center;
+}
+
+aside section i {
+  float: right;
+}
+
+/*-------------------
+    Main's style
+---------------------*/
+
+main {
+  background: #fff;
+  border: 1px solid #a7d7f9;
+  padding: 1rem;
+}
+
+.Wiki{
+  font-size: .8rem;
+  margin-bottom: 1rem;
+}
+
+h1{
+  font-size: 1.8rem;
+  font-style: italic;
+  font-family: 'Linux Libertine','Georgia','Times',serif;
+  line-height: 1.3;
+  margin-bottom: -.4rem;
+}
+
+h2{
+  font-size: 1.3rem;
+  font-family: 'Linux Libertine','Georgia','Times',serif;
+  margin: 1.25rem .5rem -.5rem 0;
+  display: inline-block;
+}
+
+#Game-menu{
+  font-size: 1.05rem;
+  font-family: Sans-serif;
+  font-weight: bold;
+  margin: 1rem .5rem .5rem 0;
+  display: inline-block;
+}
+
+.Description{
+  margin-top: 2rem;
+}
+
+.picture-datas{
+  float: right;
+  border: 1px solid #a2a9b1;
+  display: inline-block;
+  padding: .25rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+.picture-datas table{
+  text-align: left;
+  margin: 0 .25rem;
+  font-size: .8rem;
+  line-height: 1.8;
+  width: 16.5rem;
+}
+
+.picture-datas span,
+.Description span{
+  font-weight: bold;
+  font-style: italic;
+}
+
+figure{
+  padding: 0 1.5rem;
+}
+
+figcaption{
+  font-size: .8rem;
+  margin: -.4rem 0 .1rem;
+}
+
+.picture-datas img{
+  width: 14rem;
+  float: left;
+  margin-top: .5rem;
+}
+
+.Bold{
+  font-weight: bold;
+}
+
+sup{
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.Content{
+  font-size: .8rem;
+  border: 1px solid #a2a9b1;
+  display: inline-block;
+  padding: .5rem;
+  margin: .5rem 0 0;
+  background-color: #f2f2f2;
+  line-height: 1.5rem;
+}
+
+.toctitle h3{
+  display: inline;
+}
+
+.toctitle{
+  text-align: center;
+}
+
+.Button::before{
+  Content: "[ ";
+}
+
+.Button::after{
+  Content: " ]";
+}
+
+.tocnumber, .toctext {
+  display: table-cell;
+  text-decoration: inherit;
+}
+
+.tocnumber {
+    padding-left: 0;
+    padding-right: 0.5em;
+    color: #222;
+}
+
+.level2{
+  margin-left: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.pic-about-game{
+  border: 1px solid #a2a9b1;
+  padding: .25rem;
+  margin: .25rem 1rem 1rem 0;
+  background-color: #f2f2f2;
+  width: 190px;
+  float: left
+}
+
+.pic-about-game img{
+  width: 180px;
+  height: 122px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.pic-about-game p{
+  display: inline-block;
+  font-size: .75rem;
+}
+
+.Chapters ol{
+  font-size: .8rem;
+  line-height: 1.3rem;
+  margin-left: 2.5rem;
+  list-style-type: decimal;
+}
+
+.Chapters ul{
+  line-height: 1.5rem;
+  margin-left: 1.5rem;
+  list-style-type: inherit;
+}
+
+.Main-external{
+  font-style: italic;
+}
+
+.Categories{
+  border: 1px solid #a2a9b1;
+  padding: .5rem;
+  margin: .5rem 0 0;
+  background-color: #f2f2f2;
+  line-height: 1.5rem;  
+}
+
+.Category{
+  display: inline-block;
+  border-left: 1px solid #a2a9b1;
+  margin: 0.125em 0;
+  padding: 0 0.5em;
+}
+
+/*----------------------------
+        Footer's style
+----------------------------*/
+
+footer {
+  grid-column: 1 / span 2;
+  background: #f6f6f6;
+}
+</style>
 </head>
 <body>
   <header>
