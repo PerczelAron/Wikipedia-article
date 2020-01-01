@@ -3,7 +3,7 @@
 Created using JS Bin
 http://jsbin.com
 
-Copyright (c) 2019 by PerczelAron (http://jsbin.com/cubavej/12/edit)
+Copyright (c) 2020 by PerczelAron (http://jsbin.com/cubavej/13/edit)
 
 Released under the MIT license: http://jsbin.mit-license.org
 -->
@@ -28,10 +28,18 @@ Released under the MIT license: http://jsbin.mit-license.org
 }
 
 body {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   display: grid;
   grid-template-columns: 10rem calc(100% - 10rem);
-  grid-template-rows: 5rem auto 10vw;
+  grid-template-rows: 5rem auto 10rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /*-----------------------------
@@ -150,14 +158,17 @@ main {
   background: #fff;
   border: 1px solid #a7d7f9;
   padding: 1rem;
+      font-family: sans-serif;
 }
 
-.Wiki{
-  font-size: .8rem;
-  margin-bottom: 1rem;
+main p,
+main li {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #222222;
 }
 
-h1{
+h1 {
   font-size: 1.8rem;
   font-style: italic;
   font-family: 'Linux Libertine','Georgia','Times',serif;
@@ -165,14 +176,19 @@ h1{
   margin-bottom: -.4rem;
 }
 
-h2{
+.Wiki {
+  font-size: .8rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
   font-size: 1.3rem;
   font-family: 'Linux Libertine','Georgia','Times',serif;
   margin: 1.25rem .5rem -.5rem 0;
   display: inline-block;
 }
 
-#Game-menu{
+#Game-menu {
   font-size: 1.05rem;
   font-family: Sans-serif;
   font-weight: bold;
@@ -180,11 +196,11 @@ h2{
   display: inline-block;
 }
 
-.Description{
+.Description {
   margin-top: 2rem;
 }
 
-.picture-datas{
+.picture-datas {
   float: right;
   border: 1px solid #a2a9b1;
   display: inline-block;
@@ -193,7 +209,7 @@ h2{
   margin: 1rem;
 }
 
-.picture-datas table{
+.picture-datas table {
   text-align: left;
   margin: 0 .25rem;
   font-size: .8rem;
@@ -202,36 +218,36 @@ h2{
 }
 
 .picture-datas span,
-.Description span{
+.Description span {
   font-weight: bold;
   font-style: italic;
 }
 
-figure{
+figure {
   padding: 0 1.5rem;
 }
 
-figcaption{
+figcaption {
   font-size: .8rem;
   margin: -.4rem 0 .1rem;
 }
 
-.picture-datas img{
+.picture-datas img {
   width: 14rem;
   float: left;
   margin-top: .5rem;
 }
 
-.Bold{
+.Bold {
   font-weight: bold;
 }
 
-sup{
+sup {
   vertical-align: super;
   font-size: smaller;
 }
 
-.Content{
+.Content {
   font-size: .8rem;
   border: 1px solid #a2a9b1;
   display: inline-block;
@@ -241,46 +257,40 @@ sup{
   line-height: 1.5rem;
 }
 
-.toctitle h3{
+.Content li {
+    font-size: 95%;
+}
+
+.toctitle h3 {
   display: inline;
 }
 
-.toctitle{
+.toctitle {
   text-align: center;
 }
 
-.Button::before{
+.Button::before {
   Content: "[ ";
 }
 
-.Button::after{
+.Button::after {
   Content: " ]";
 }
 
 .tocnumber, .toctext {
   display: table-cell;
-  text-decoration: inherit;
 }
 
 .tocnumber {
-    padding-left: 0;
-    padding-right: 0.5em;
-    color: #222;
+  padding-right: 0.5em;
+  color: #222;
 }
 
-.level2{
+.level2 {
   margin-left: 1.5rem;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.pic-about-game{
+.pic-about-game {
   border: 1px solid #a2a9b1;
   padding: .25rem;
   margin: .25rem 1rem 1rem 0;
@@ -289,36 +299,36 @@ a:hover {
   float: left
 }
 
-.pic-about-game img{
+.pic-about-game img {
   width: 180px;
   height: 122px;
   vertical-align: middle;
   text-align: center;
 }
 
-.pic-about-game p{
+.pic-about-game p {
   display: inline-block;
   font-size: .75rem;
 }
 
-.Chapters ol{
+.Chapters ol {
   font-size: .8rem;
   line-height: 1.3rem;
   margin-left: 2.5rem;
   list-style-type: decimal;
 }
 
-.Chapters ul{
+.Chapters ul {
   line-height: 1.5rem;
   margin-left: 1.5rem;
   list-style-type: inherit;
 }
 
-.Main-external{
+.Main-external {
   font-style: italic;
 }
 
-.Categories{
+.Categories {
   border: 1px solid #a2a9b1;
   padding: .5rem;
   margin: .5rem 0 0;
@@ -326,7 +336,7 @@ a:hover {
   line-height: 1.5rem;  
 }
 
-.Category{
+.Category {
   display: inline-block;
   border-left: 1px solid #a2a9b1;
   margin: 0.125em 0;
@@ -340,7 +350,26 @@ a:hover {
 footer {
   grid-column: 1 / span 2;
   background: #f6f6f6;
+  padding: .5rem;
+  font-size: .8rem;
+  line-height: 1.2;
+  font-family: sans-serif;
 }
+
+footer p,
+footer ul {
+  margin-top: 1rem;
+  margin-left: 10rem;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 .2rem;
+}
+
+
+
+
 </style>
 </head>
 <body>
@@ -465,7 +494,7 @@ footer {
         <li>
           <a href="#Story">
             <span class="tocnumber">1</span>
-            <span class="toctext">Story</span>
+            <span class="toctext">Plot</span>
           </a>         
         </li>
         <li>
@@ -500,7 +529,7 @@ footer {
       </ol>
   </div>
   <div class="Chapters">
-    <h2 id="Story">Story</h2>      
+    <h2 id="Story">Plot</h2>      
     <span class="Button"><a href="*">edit</a></span>
     <hr>
     <p>Aliens from the <a href="https://en.wikipedia.org/wiki/Communism" target="_blank">communist</a> planet of Rooskee are invading peaceful, democratic planets and turning their inhabitants into "Communist Mutants." The communist mutant armies are controlled by the Mother Creature, a strange alien who has gone mad due to irradiated <a href="https://en.wikipedia.org/wiki/Vodka" target="_blank">vodka</a>.</p>
@@ -514,7 +543,7 @@ footer {
       <p>The player must destroy the Mother Creature without being destroyed by the mutants and their bombs.</p>
     </div>
     <p>The player starts off with three reserve cannons. The object is to destroy the mutants aliens and, most importantly, the Mother Creature. The mutants hatch from moving eggs at the top of the screen. Because the Mother Creature replenishes eggs when they hatch or are destroyed, it must be defeated before the player can advance to the next wave. If a mutant or a bomb thrown by a mutant comes into contact with the cannon, the cannon will be destroyed and a reserve must be called up. A new cannon is awarded on every other wave.</p>
-    <h3 id="Game-menu">Game menu</h3>
+    <h3 id="Game-menu">Game options</h3>
     <span class="Button"><a href="*">edit</a></span>
     <p>The menu allows a variety of gameplay changes; for example, the player may toggle the shield option on or off. If activated, "shield" mode allowed a player to press down on the joystick to become invincible for a short period (only one shield was allotted per level). Another feature was the "time warp," which allowed the player to press up on the joystick to temporarily slow down the passage of time for his opponents (i.e., they move slower than usual). Additionally, the type of shot fired could be changed by activating the "penetrating fire" option (which enhanced the beam fired so that it could withstand hitting two mutants rather than a single one) and/or the "guided fire" option (which caused the beam to be moved with the joystick rather than firing in a straight line).<br>
 The menu also allowed for multiple players (up to four) to be entered into the game. Players one and three shared the first joystick while players two and four shared the second.</p>
@@ -542,7 +571,6 @@ The menu also allowed for multiple players (up to four) to be entered into the g
     <hr>
     <ul>
       <li><a href="http://www.atarimania.com/game-atari-2600-vcs-communist-mutants-from-space_13667.html" target="_blank" class="Main-external">Communist Mutants from Space</a> at Atari Mania</li>
-      <li><a href="https://www.atariage.com/software_page.html?SystemID=2600&SoftwareLabelID=99" target="_blank">Communist Mutants from Space</a> at <a href="https://en.wikipedia.org/wiki/AtariAge" target="_blank">AtariAge</a></li>
     </ul>
     <div class="Categories">
       <a  href="https://en.wikipedia.org/wiki/Help:Category" target="_blank">Categories:</a> 
@@ -560,7 +588,19 @@ The menu also allowed for multiple players (up to four) to be entered into the g
   </div>
   </main>
   <footer>
-    <p>footer</p>
+    <p>This page was last edited on 1 September 2019, at 17:06 (UTC).
+</p>
+    <p>Text is available under the <a href="https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" target="_blank">Creative Commons Attribution-ShareAlike License</a>; additional terms may apply. By using this site, you agree to the <a href="https://foundation.wikimedia.org/wiki/Terms_of_Use/en" target="_blank">Terms of Use</a> and <a href="https://foundation.wikimedia.org/wiki/Privacy_policy" target="_blank">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="https://wikimediafoundation.org/" target="_blank">Wikimedia Foundation, Inc.</a>, a non-profit organization.</p>
+    <ul>
+      <li><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" target="_blank">Privacy policy</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Wikipedia:About" target="_blank">About Wikipedia</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" target="_blank">Disclaimers</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Wikipedia:Contact_us" target="_blank">Contact Wikipedia</a></li>
+      <li><a href="https://www.mediawiki.org/wiki/How_to_contribute" target="_blank">Developers</a></li>
+      <li><a href="https://stats.wikimedia.org/v2/#/en.wikipedia.org" target="_blank">Statistics</a></li>
+      <li><a href="https://foundation.wikimedia.org/wiki/Cookie_statement" target="_blank">Cookie statement</a></li>
+      <li><a href="https://en.m.wikipedia.org/wiki/Communist_Mutants_from_Space" target="_blank">Mobile view</a></li>
+    </ul>
   </footer>
 </body>
 </html>
