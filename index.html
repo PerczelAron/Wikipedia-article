@@ -3,14 +3,14 @@
 Created using JS Bin
 http://jsbin.com
 
-Copyright (c) 2020 by PerczelAron (http://jsbin.com/cubavej/13/edit)
+Copyright (c) 2020 by PerczelAron (http://jsbin.com/cubavej/15/edit)
 
 Released under the MIT license: http://jsbin.mit-license.org
 -->
 <meta name="robots" content="noindex">
-<html>
+<html lang="en">
 <head>
-<meta name="description" content="Communist Mutants from Space 2">
+<meta name="description" content="Communist Mutants from Space">
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
@@ -81,14 +81,26 @@ header li {
   left: 10rem;
 }
 
-#main-right {
+.main-right {
   bottom: -1px;
   right: 1.75rem;
 }
 
 #main-left li,
-#main-right li {
+.main-right li {
   margin: 0 -5px 0 0;
+}
+
+@media (min-width: 681px) {
+  #main-right-closed {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  #main-right-opened {
+    display: none;
+  }
 }
 
 .active {
@@ -109,11 +121,16 @@ header li {
   bottom: 1px;
 }
 
-#search {
+.search {
   position: relative;
-  bottom: 7px;
+  bottom: 2px;
   left: 10px;
 }
+
+input {
+  padding: 3px 5px;
+}
+
 /*-----------------------------
          Aside's style
 -----------------------------*/
@@ -146,8 +163,10 @@ section h3::after {
   text-align: center;
 }
 
-aside section i {
+aside section h3 i,
+#edit-links {
   float: right;
+  color: grey;
 }
 
 /*-------------------
@@ -240,6 +259,10 @@ figcaption {
 
 .Bold {
   font-weight: bold;
+}
+
+i {
+  font-style: italic;
 }
 
 sup {
@@ -368,8 +391,6 @@ footer li {
 }
 
 
-
-
 </style>
 </head>
 <body>
@@ -389,17 +410,23 @@ footer li {
         <li><button class="passive">Talk</button></li>
       </ul>
     </section>
-    <section>
-      <ul id="main-right">
+    <section id="main-right-opened">
+      <ul class="main-right">
         <li><button class="active">Read</button></li>
         <li><button class="passive">Edit</button></li>
         <li><button class="passive">View history</button></li>
-        <li><div id="search"><input type="text" placeholder="Search Wikipedia" name="search"> <a href="#" target="_blank"><i class="fa fa-search"></i></a></div></li>
+        <li><div class="search"><input type="text" placeholder="Search Wikipedia" name="search"> <a href="#" target="_blank"><i class="fa fa-search"></i></a></div></li>
+      </ul>
+    </section>
+    <section id="main-right-closed">
+      <ul class="main-right">
+        <li><button class="passive">More</button></li>
+        <li><div class="search"><input type="text" placeholder="Search Wikipedia" name="search"> <a href="#" target="_blank"><i class="fa fa-search"></i></a></div></li>
       </ul>
     </section>
   </header>
   <aside>
-    <img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png">
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png" alt="Wikipedia logo">
     <section>
       <ul>
         <li><a href="https://en.wikipedia.org/wiki/Main_Page" target="_blank">Main page</a></li>
@@ -444,7 +471,10 @@ footer li {
     </section>
     <section>
       <h3>Languages<a href="#"><i class="fa fa-cog fa-lg"></i></a></h3>
-      <a href="https://es.wikipedia.org/wiki/Mutantes_comunistas_del_espacio_exterior" target="_blank">Español</a>
+      <ul>
+        <li><a href="https://es.wikipedia.org/wiki/Mutantes_comunistas_del_espacio_exterior" target="_blank">Español</a></li>
+        <li><a id="edit-links" href="#"><i class="fas fa-pen fa-sm"></i>Edit links</a></li>
+      </ul>
     </section>
   </aside>
   <main>
@@ -532,7 +562,7 @@ footer li {
     <h2 id="Story">Plot</h2>      
     <span class="Button"><a href="*">edit</a></span>
     <hr>
-    <p>Aliens from the <a href="https://en.wikipedia.org/wiki/Communism" target="_blank">communist</a> planet of Rooskee are invading peaceful, democratic planets and turning their inhabitants into "Communist Mutants." The communist mutant armies are controlled by the Mother Creature, a strange alien who has gone mad due to irradiated <a href="https://en.wikipedia.org/wiki/Vodka" target="_blank">vodka</a>.</p>
+    <p>Aliens from the <a href="https://en.wikipedia.org/wiki/Communism" target="_blank">communist</a> planet of Rooskee are invading peaceful, democratic planets and turning their inhabitants into "Communist Mutants." The communist mutant armies are controlled by the Mother Creature, a strange alien who has gone mad due to irradiated <a href="https://en.wikipedia.org/wiki/Vodka" target="_blank">vodka</a>.<sup id="num4"><a href="#ref4">[4]</a></sup></p>
   </div>
   <div class="Chapters">
     <h2 id="Gameplay">Gameplay</h2>
@@ -552,7 +582,7 @@ The menu also allowed for multiple players (up to four) to be entered into the g
     <h2 id="Easter-egg">Easter egg</h2>
     <span class="Button"><a href="*">edit</a></span>
     <hr>
-    <p>Holding fire during power-on of the Atari 2600 causes the "HI" on the high scores screen to change to "SHL", the initials of programmer Stephen H. Landrum.<sup id="num4"><a href="#ref4">[4]</a></sup></p>
+    <p>Holding fire during power-on of the Atari 2600 causes the "HI" on the high scores screen to change to "SHL", the initials of programmer Stephen H. Landrum.<sup id="num5"><a href="#ref5">[5]</a></sup></p>
   </div>
   <div class="Chapters">
     <h2 id="References">References</h2>
@@ -562,7 +592,8 @@ The menu also allowed for multiple players (up to four) to be entered into the g
       <li id="ref1"><a href="#num1">^</a> Hague, James. <a href="https://dadgum.com/giantlist/" target="_blank">"The Giant List of Classic Game Programmers"</a>.</li>
       <li id="ref2"><a href="#num2">^</a> <a href="https://books.google.com.au/books?id=yy8EAAAAMBAJ&lpg=PA26&dq=Supercharger%20starpath&pg=PA26#v=onepage&q=Supercharger%20starpath&f=false" target="_blank">I break for Arcadians:Entertainment abounds in a gaggle of games</a>, Page 26, InfoWorld, 27 Jun 1983,</li>
       <li id="ref3"><a href="#num3">^</a> Brundage, Darryl (June 23, 2005). <a href="http://ataritimes.com/index.php?ArticleIDX=475" target="_blank">"Communist Mutants from Space"</a>. The Atari Times.</li>
-      <li id="ref4"><a href="#num4">^</a> Federico, Chris. <a href="http://www.geocities.com/SiliconValley/Server/2990/ocgs/issue8/eggstron.html" target="_blank">"The Complete 2600 Easter Egg Archive"</a>. Orphaned Computers & Game Systems. Retrieved 2007-12-28.<sup>[<a href="https://en.wikipedia.org/wiki/Wikipedia:Link_rot" target="_blank">dead link</a>]</sup></li>
+      <li id="ref4"><a href="#num4">^</a> <a href="https://archive.org/details/Communist_Mutants_From_Space_1982_Starpath" target="_blank">"Communist Mutants from Space manual"</a> <i>archive.org</i>. Starpath. 1982.</li>
+      <li id="ref5"><a href="#num5">^</a> Federico, Chris. <a href="http://www.geocities.com/SiliconValley/Server/2990/ocgs/issue8/eggstron.html" target="_blank">"The Complete 2600 Easter Egg Archive"</a>. Orphaned Computers & Game Systems. Retrieved 2007-12-28.<sup>[<a href="https://en.wikipedia.org/wiki/Wikipedia:Link_rot" target="_blank">dead link</a>]</sup></li>
     </ol>
   </div>
   <div class="Chapters">
